@@ -11,7 +11,7 @@ This is a cross-platform fitness tracking mobile app built with React Native and
 - **Expo Router** (~6.0) - File-based navigation
 - **TypeScript** (~5.9) - Type-safe development
 - **React Query** (@tanstack/react-query) - Server state management
-- **Zustand** - Client state management
+- **React Context** (@nkzw/create-context-hook) - Client state management
 - **AsyncStorage** - Local data persistence
 - **Lucide React Native** - Icon library
 - **Bun** - Package manager and runtime
@@ -91,7 +91,7 @@ This is a cross-platform fitness tracking mobile app built with React Native and
 1. **Colors & Theming**
    - Primary: `#FF6B35` (orange)
    - Accent: `#F7931E` (gold)
-   - Background: Dark theme (`#0F0F0F`, `#1A1A1A`)
+   - Background: Dark theme (`#0F0F0F`, `#1A1A1A`) - Note: colors.ts contains a light theme template but the app uses dark theme with hardcoded values
    - Text: White (`#FFFFFF`) and gray (`#999999`, `#666666`)
 
 2. **Components**
