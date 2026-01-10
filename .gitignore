@@ -11,7 +11,10 @@ expo-env.d.ts
 
 # Native
 ios/
-android/
+android/*
+!android/app/
+android/app/*
+!android/app/proguard-rules.pro
 *.orig.*
 *.jks
 *.p8
