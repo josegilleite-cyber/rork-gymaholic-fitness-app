@@ -21,7 +21,7 @@
 -keep class org.unimodules.** { *; }
 
 # AsyncStorage native module (package pattern)
--keep class com.reactnativecommunity.asyncstorage.** { *; }
+-keep class com.reactnativeasyncstorage.** { *; }
 
 # react-native-gesture-handler
 -keep class com.swmansion.gesturehandler.** { *; }
