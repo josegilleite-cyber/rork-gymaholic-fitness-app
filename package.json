@@ -1,7 +1,7 @@
 {
   "name": "expo-app",
   "main": "expo-router/entry",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "scripts": {
     "start": "bunx rork start -p nlio4jd4d2w7tq3u73yoc --tunnel",
     "start-web": "bunx rork start -p nlio4jd4d2w7tq3u73yoc --web --tunnel",
@@ -43,6 +43,7 @@
     "react-native-svg": "15.12.1",
     "react-native-web": "^0.21.0",
     "react-native-worklets": "0.5.1",
+    "zod": "^4.3.5",
     "zustand": "^5.0.2"
   },
   "devDependencies": {
