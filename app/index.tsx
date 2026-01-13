@@ -110,6 +110,16 @@ export default function WelcomeScreen() {
           <Text style={styles.promoText}>
             7-day free trial • Then $4.99/mo
           </Text>
+
+          <Pressable
+            style={({ pressed }) => [
+              styles.privacyLink,
+              pressed && { opacity: 0.6 },
+            ]}
+            onPress={() => router.push('/privacy-policy')}
+          >
+            <Text style={styles.privacyLinkText}>Privacy Policy</Text>
+          </Pressable>
         </Animated.View>
       </SafeAreaView>
     </LinearGradient>
@@ -237,5 +247,15 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: '#666666',
     marginTop: 8,
+  },
+  privacyLink: {
+    paddingVertical: 12,
+    alignItems: 'center',
+    marginTop: 4,
+  },
+  privacyLinkText: {
+    fontSize: 14,
+    color: '#999999',
+    textDecorationLine: 'underline',
   },
 });
