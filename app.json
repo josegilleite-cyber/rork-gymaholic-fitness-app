@@ -25,7 +25,8 @@
       "package": "app.rork.gymaholic_fitness_app",
       "permissions": [
         "android.permission.VIBRATE"
-      ]
+      ],
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
       "favicon": "./assets/images/favicon.png"
@@ -38,7 +39,17 @@
         }
       ],
       "expo-font",
-      "expo-web-browser"
+      "expo-web-browser",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "extraMavenRepos": [
+              "https://maven.google.com"
+            ]
+          }
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true

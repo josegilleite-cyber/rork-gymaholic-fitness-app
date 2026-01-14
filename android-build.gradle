@@ -1,0 +1,20 @@
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+// Force Play Integrity API version
+configurations.all {
+    resolutionStrategy {
+        force 'com.google.android.play:integrity:1.4.0'
+    }
+}
