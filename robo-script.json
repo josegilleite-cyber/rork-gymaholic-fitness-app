@@ -37,7 +37,7 @@
   },
   {
     "eventType": "WAIT",
-    "waitTime": 1000
+    "waitTime": 1500
   },
   {
     "eventType": "CLICK",
@@ -64,7 +64,203 @@
     }
   },
   {
+    "eventType": "WAIT",
+    "waitTime": 1000
+  },
+  {
+    "eventType": "CLICK",
+    "elementDescriptor": {
+      "contentDescription": "Complete set"
+    }
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 1500
+  },
+  {
+    "eventType": "CLICK",
+    "elementDescriptor": {
+      "text": "Add Exercise"
+    }
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 1000
+  },
+  {
+    "eventType": "CLICK",
+    "elementDescriptor": {
+      "text": "Deadlift"
+    }
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 1000
+  },
+  {
+    "eventType": "VIEW_TEXT",
+    "replacementText": "150",
+    "elementDescriptor": {
+      "hint": "Weight"
+    }
+  },
+  {
+    "eventType": "VIEW_TEXT",
+    "replacementText": "8",
+    "elementDescriptor": {
+      "hint": "Reps"
+    }
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 1000
+  },
+  {
+    "eventType": "CLICK",
+    "elementDescriptor": {
+      "contentDescription": "Complete set"
+    }
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 1500
+  },
+  {
+    "eventType": "CLICK",
+    "elementDescriptor": {
+      "text": "Add Exercise"
+    }
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 1000
+  },
+  {
+    "eventType": "CLICK",
+    "elementDescriptor": {
+      "text": "Barbell Squat"
+    }
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 1000
+  },
+  {
+    "eventType": "VIEW_TEXT",
+    "replacementText": "120",
+    "elementDescriptor": {
+      "hint": "Weight"
+    }
+  },
+  {
+    "eventType": "VIEW_TEXT",
+    "replacementText": "12",
+    "elementDescriptor": {
+      "hint": "Reps"
+    }
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 1000
+  },
+  {
+    "eventType": "CLICK",
+    "elementDescriptor": {
+      "contentDescription": "Complete set"
+    }
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 2000
+  },
+  {
+    "eventType": "CLICK",
+    "elementDescriptor": {
+      "text": "Push"
+    }
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 1000
+  },
+  {
+    "eventType": "CLICK",
+    "elementDescriptor": {
+      "text": "Pull"
+    }
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 1000
+  },
+  {
+    "eventType": "CLICK",
+    "elementDescriptor": {
+      "text": "Legs"
+    }
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 1500
+  },
+  {
+    "eventType": "CLICK",
+    "elementDescriptor": {
+      "text": "Lateral Raises"
+    }
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 1000
+  },
+  {
+    "eventType": "VIEW_TEXT",
+    "replacementText": "25",
+    "elementDescriptor": {
+      "hint": "Weight"
+    }
+  },
+  {
+    "eventType": "VIEW_TEXT",
+    "replacementText": "15",
+    "elementDescriptor": {
+      "hint": "Reps"
+    }
+  },
+  {
     "eventType": "PRESSED_BACK"
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 2000
+  },
+  {
+    "eventType": "SCROLL_VERTICAL",
+    "elementDescriptor": {
+      "className": "android.widget.ScrollView"
+    },
+    "scrollDirection": "DOWN"
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 1000
+  },
+  {
+    "eventType": "SCROLL_VERTICAL",
+    "elementDescriptor": {
+      "className": "android.widget.ScrollView"
+    },
+    "scrollDirection": "UP"
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 1500
+  },
+  {
+    "eventType": "CLICK",
+    "elementDescriptor": {
+      "text": "Finish Workout"
+    }
   },
   {
     "eventType": "WAIT",
@@ -79,6 +275,73 @@
   {
     "eventType": "WAIT",
     "waitTime": 2000
+  },
+  {
+    "eventType": "SCROLL_VERTICAL",
+    "elementDescriptor": {
+      "className": "android.widget.ScrollView"
+    },
+    "scrollDirection": "DOWN"
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 1000
+  },
+  {
+    "eventType": "CLICK",
+    "elementDescriptor": {
+      "contentDescription": "View workout details"
+    }
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 2000
+  },
+  {
+    "eventType": "PRESSED_BACK"
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 1000
+  },
+  {
+    "eventType": "PRESSED_BACK"
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 1500
+  },
+  {
+    "eventType": "SCROLL_VERTICAL",
+    "elementDescriptor": {
+      "className": "android.widget.ScrollView"
+    },
+    "scrollDirection": "DOWN"
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 1000
+  },
+  {
+    "eventType": "CLICK",
+    "elementDescriptor": {
+      "text": "Privacy Policy"
+    }
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 2000
+  },
+  {
+    "eventType": "SCROLL_VERTICAL",
+    "elementDescriptor": {
+      "className": "android.widget.ScrollView"
+    },
+    "scrollDirection": "DOWN"
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 1000
   },
   {
     "eventType": "PRESSED_BACK"
