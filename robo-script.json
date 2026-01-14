@@ -1,0 +1,86 @@
+[
+  {
+    "eventType": "LAUNCH_ACTIVITY",
+    "optional": false
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 2000
+  },
+  {
+    "eventType": "VIEW_TEXT",
+    "replacementText": "",
+    "elementDescriptor": {
+      "resourceId": ".*start.*training.*",
+      "ancestorResourceId": "",
+      "className": "android.widget.Button",
+      "contentDescription": "",
+      "text": "Start Training"
+    }
+  },
+  {
+    "eventType": "CLICK",
+    "elementDescriptor": {
+      "resourceId": "",
+      "text": "Start Training"
+    }
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 2000
+  },
+  {
+    "eventType": "CLICK",
+    "elementDescriptor": {
+      "text": "Add Exercise"
+    }
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 1000
+  },
+  {
+    "eventType": "CLICK",
+    "elementDescriptor": {
+      "text": "Barbell Bench Press"
+    }
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 1000
+  },
+  {
+    "eventType": "VIEW_TEXT",
+    "replacementText": "100",
+    "elementDescriptor": {
+      "hint": "Weight"
+    }
+  },
+  {
+    "eventType": "VIEW_TEXT",
+    "replacementText": "10",
+    "elementDescriptor": {
+      "hint": "Reps"
+    }
+  },
+  {
+    "eventType": "PRESSED_BACK"
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 2000
+  },
+  {
+    "eventType": "CLICK",
+    "elementDescriptor": {
+      "text": "View History"
+    }
+  },
+  {
+    "eventType": "WAIT",
+    "waitTime": 2000
+  },
+  {
+    "eventType": "PRESSED_BACK"
+  }
+]
