@@ -20,7 +20,10 @@ function RootLayoutNav() {
       <Stack.Screen name="workout" options={{ animation: 'slide_from_right' }} />
       <Stack.Screen name="history" options={{ animation: 'slide_from_right' }} />
       <Stack.Screen name="progress" options={{ animation: 'slide_from_right' }} />
+      <Stack.Screen name="pricing" options={{ animation: 'slide_from_bottom', presentation: 'modal' }} />
       <Stack.Screen name="exercises" options={{ animation: 'slide_from_bottom', presentation: 'modal' }} />
+      <Stack.Screen name="exercise-detail" options={{ animation: 'slide_from_right' }} />
+      <Stack.Screen name="privacy-policy" options={{ animation: 'slide_from_right' }} />
     </Stack>
   );
 }

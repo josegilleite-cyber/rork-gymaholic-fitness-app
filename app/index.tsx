@@ -1,14 +1,30 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
-import { Dumbbell, TrendingUp, Target, Zap } from 'lucide-react-native';
+import * as StoreReview from 'expo-store-review';
+import * as Haptics from 'expo-haptics';
+import { Dumbbell, TrendingUp, Target, Zap, Star, Crown } from 'lucide-react-native';
 import React from 'react';
-import { StyleSheet, Text, View, Pressable, Animated } from 'react-native';
+import { StyleSheet, Text, View, Pressable, Animated, Alert } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function WelcomeScreen() {
   const router = useRouter();
   const fadeAnim = React.useRef(new Animated.Value(0)).current;
   const slideAnim = React.useRef(new Animated.Value(50)).current;
+
+  const handleRateApp = async () => {
+    Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+    const isAvailable = await StoreReview.isAvailableAsync();
+    if (isAvailable) {
+      await StoreReview.requestReview();
+    } else {
+      Alert.alert(
+        '¡Gracias!',
+        'Tu opinión es importante. Por favor, califica nuestra app en la tienda.',
+        [{ text: 'OK' }]
+      );
+    }
+  };
 
   React.useEffect(() => {
     Animated.parallel([
@@ -107,8 +123,40 @@ export default function WelcomeScreen() {
             <Text style={styles.secondaryButtonText}>View History</Text>
           </Pressable>
 
+          <Pressable
+            style={({ pressed }) => [
+              styles.secondaryButton,
+              pressed && styles.buttonPressed,
+            ]}
+            onPress={() => router.push('/exercises')}
+          >
+            <Text style={styles.secondaryButtonText}>Programas de Hipertrofia</Text>
+          </Pressable>
+
+          <Pressable
+            style={({ pressed }) => [
+              styles.premiumButton,
+              pressed && styles.buttonPressed,
+            ]}
+            onPress={() => router.push('/pricing')}
+          >
+            <Crown size={20} color="#FF6B35" />
+            <Text style={styles.premiumButtonText}>Desbloquear Premium</Text>
+          </Pressable>
+
+          <Pressable
+            style={({ pressed }) => [
+              styles.ratingButton,
+              pressed && { opacity: 0.6 },
+            ]}
+            onPress={handleRateApp}
+          >
+            <Star size={18} color="#FFD700" fill="#FFD700" />
+            <Text style={styles.ratingButtonText}>Califica nuestra app</Text>
+          </Pressable>
+
           <Text style={styles.promoText}>
-            7-day free trial • Then $4.99/mo
+            Prueba gratis 7 días • Luego €4.99/mes
           </Text>
 
           <Pressable
@@ -241,6 +289,35 @@ const styles = StyleSheet.create({
   buttonPressed: {
     opacity: 0.7,
     transform: [{ scale: 0.98 }],
+  },
+  premiumButton: {
+    paddingVertical: 16,
+    alignItems: 'center',
+    borderRadius: 16,
+    backgroundColor: 'rgba(255, 107, 53, 0.15)',
+    borderWidth: 1,
+    borderColor: '#FF6B35',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    gap: 8,
+  },
+  premiumButtonText: {
+    fontSize: 17,
+    fontWeight: '700' as const,
+    color: '#FF6B35',
+  },
+  ratingButton: {
+    paddingVertical: 14,
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    gap: 8,
+    marginTop: 4,
+  },
+  ratingButtonText: {
+    fontSize: 15,
+    fontWeight: '600' as const,
+    color: '#999999',
   },
   promoText: {
     textAlign: 'center',

@@ -1,7 +1,7 @@
 import { LinearGradient } from 'expo-linear-gradient';
 import { useRouter } from 'expo-router';
 import * as Haptics from 'expo-haptics';
-import { Plus, ArrowLeft, Clock, Trash2, Check, Save } from 'lucide-react-native';
+import { Plus, ArrowLeft, Clock, Trash2, Check, Save, Play } from 'lucide-react-native';
 import React, { useState, useEffect, useRef } from 'react';
 import { StyleSheet, Text, View, Pressable, TextInput, ScrollView, Modal, Alert } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -285,19 +285,37 @@ export default function WorkoutScreen() {
 
               <ScrollView style={styles.exerciseList}>
                 {filteredExercises.map(exercise => (
-                  <Pressable
-                    key={exercise.id}
-                    onPress={() => addExercise(exercise)}
-                    style={styles.exerciseItem}
-                  >
-                    <View>
-                      <Text style={styles.exerciseItemName}>{exercise.name}</Text>
-                      <Text style={styles.exerciseItemMeta}>
-                        {exercise.muscleGroup} • {exercise.equipment}
-                      </Text>
-                    </View>
-                    <Plus size={20} color="#FF6B35" />
-                  </Pressable>
+                  <View key={exercise.id} style={styles.exerciseItemContainer}>
+                    <Pressable
+                      onPress={() => addExercise(exercise)}
+                      style={styles.exerciseItem}
+                    >
+                      <View style={styles.exerciseItemInfo}>
+                        <Text style={styles.exerciseItemName}>{exercise.name}</Text>
+                        <Text style={styles.exerciseItemMeta}>
+                          {exercise.muscleGroup} • {exercise.equipment}
+                        </Text>
+                      </View>
+                      <View style={styles.exerciseItemActions}>
+                        {exercise.videoUrl && (
+                          <Pressable
+                            onPress={(e) => {
+                              e.stopPropagation();
+                              Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                              router.push({
+                                pathname: '/exercise-detail',
+                                params: { exerciseId: exercise.id }
+                              });
+                            }}
+                            style={styles.videoButton}
+                          >
+                            <Play size={18} color="#FF6B35" />
+                          </Pressable>
+                        )}
+                        <Plus size={20} color="#FF6B35" />
+                      </View>
+                    </Pressable>
+                  </View>
                 ))}
               </ScrollView>
             </LinearGradient>
@@ -540,13 +558,33 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 20,
   },
+  exerciseItemContainer: {
+    borderBottomWidth: 1,
+    borderBottomColor: 'rgba(255, 255, 255, 0.1)',
+  },
   exerciseItem: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingVertical: 16,
-    borderBottomWidth: 1,
-    borderBottomColor: 'rgba(255, 255, 255, 0.1)',
+  },
+  exerciseItemInfo: {
+    flex: 1,
+  },
+  exerciseItemActions: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+  },
+  videoButton: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    backgroundColor: 'rgba(255, 107, 53, 0.15)',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: 'rgba(255, 107, 53, 0.3)',
   },
   exerciseItemName: {
     fontSize: 16,
