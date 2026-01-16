@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Splits fitness & Nutrition",
-    "slug": "splits-fitness-nutrition",
+    "slug": "gymaholic",
     "version": "1.2.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -24,6 +24,7 @@
       },
       "package": "app.rork.gymaholic_fitness_app",
       "permissions": [
+        "android.permission.VIBRATE",
         "android.permission.VIBRATE"
       ],
       "googleServicesFile": "./google-services.json"
@@ -62,6 +63,12 @@
         "projectId": "16a115ee-0bc7-4cef-82ab-acf00553c897"
       }
     },
-    "owner": "kalimators-organization"
+    "owner": "kalimators-organization",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/16a115ee-0bc7-4cef-82ab-acf00553c897"
+    }
   }
 }
