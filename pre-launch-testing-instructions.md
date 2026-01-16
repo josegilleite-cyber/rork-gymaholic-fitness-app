@@ -1,7 +1,7 @@
-# Pre-launch Testing Instructions for Gymaholic
+# Pre-launch Testing Instructions for Splits
 
 ## App Overview
-Gymaholic is a fitness tracking app that stores data locally. No login required.
+Splits is a fitness tracking app that stores data locally. No login required.
 
 ## Testing Flow
 1. Launch the app

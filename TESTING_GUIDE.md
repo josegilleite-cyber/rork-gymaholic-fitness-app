@@ -1,8 +1,8 @@
-# Gymaholic - Guía para Beta Testers
+# Splits - Guía para Beta Testers
 
 ## 🎯 ¡Únete al programa de beta testing!
 
-Gymaholic está buscando testers para mejorar la mejor app de fitness progresivo. Tu feedback es invaluable.
+Splits está buscando testers para mejorar la mejor app de fitness progresivo. Tu feedback es invaluable.
 
 ## 📱 Cómo unirte
 
@@ -86,4 +86,4 @@ Por favor incluye:
 
 **¿Preguntas?** Contáctanos en: [TU_EMAIL]
 
-Gracias por ayudarnos a hacer Gymaholic la mejor app de fitness! 💪
+Gracias por ayudarnos a hacer Splits la mejor app de fitness! 💪

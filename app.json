@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Gymaholic Fitness App",
-    "slug": "gymaholic",
+    "name": "Splits fitness & Nutrition",
+    "slug": "splits-fitness-nutrition",
     "version": "1.2.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",

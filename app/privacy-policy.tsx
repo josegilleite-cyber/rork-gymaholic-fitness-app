@@ -34,7 +34,7 @@ export default function PrivacyPolicyScreen() {
 
           <Text style={styles.sectionTitle}>1. Information We Collect</Text>
           <Text style={styles.paragraph}>
-            Gymaholic collects and stores workout data locally on your device, including exercise logs, sets, reps, weights, and workout history. This data is stored using AsyncStorage and remains on your device.
+            Splits collects and stores workout data locally on your device, including exercise logs, sets, reps, weights, and workout history. This data is stored using AsyncStorage and remains on your device.
           </Text>
 
           <Text style={styles.sectionTitle}>2. How We Use Your Information</Text>
@@ -52,14 +52,14 @@ export default function PrivacyPolicyScreen() {
 
           <Text style={styles.sectionTitle}>4. Permissions</Text>
           <Text style={styles.paragraph}>
-            Gymaholic may request the following permissions:
+            Splits may request the following permissions:
           </Text>
           <Text style={styles.bulletPoint}>• Vibration: For haptic feedback during workouts</Text>
           <Text style={styles.bulletPoint}>• Storage: To save workout data locally on your device</Text>
 
           <Text style={styles.sectionTitle}>5. Third-Party Services</Text>
           <Text style={styles.paragraph}>
-            Gymaholic does not integrate with third-party analytics, advertising, or tracking services. Your workout sessions remain completely private.
+            Splits does not integrate with third-party analytics, advertising, or tracking services. Your workout sessions remain completely private.
           </Text>
 
           <Text style={styles.sectionTitle}>6. Data Deletion</Text>
@@ -69,7 +69,7 @@ export default function PrivacyPolicyScreen() {
 
           <Text style={styles.sectionTitle}>7. Children's Privacy</Text>
           <Text style={styles.paragraph}>
-            Gymaholic does not knowingly collect information from children under 13 years of age. The app is intended for users aged 13 and above.
+            Splits does not knowingly collect information from children under 13 years of age. The app is intended for users aged 13 and above.
           </Text>
 
           <Text style={styles.sectionTitle}>8. Changes to This Policy</Text>
@@ -81,7 +81,7 @@ export default function PrivacyPolicyScreen() {
           <Text style={styles.paragraph}>
             If you have questions or concerns about this Privacy Policy, please contact us at:
           </Text>
-          <Text style={styles.contactText}>support@gymaholic.app</Text>
+          <Text style={styles.contactText}>support@splits-fitness.app</Text>
 
           <View style={styles.bottomSpacer} />
         </ScrollView>

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Script para configurar Google Play Service Account
-# Autor: Gymaholic Team
+# Autor: Splits Team
 
 set -e
 

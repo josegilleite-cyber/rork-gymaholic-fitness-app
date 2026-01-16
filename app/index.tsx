@@ -59,8 +59,8 @@ export default function WelcomeScreen() {
           <View style={styles.iconContainer}>
             <Dumbbell size={56} color="#FF6B35" strokeWidth={2.5} />
           </View>
-          <Text style={styles.title}>Gymaholic</Text>
-          <Text style={styles.subtitle}>Progressive Overload Made Simple</Text>
+          <Text style={styles.title}>Splits</Text>
+          <Text style={styles.subtitle}>Fitness & Nutrition Made Simple</Text>
         </Animated.View>
 
         <Animated.View 

@@ -1,4 +1,4 @@
-# Copilot Instructions for Gymaholic Fitness App
+# Copilot Instructions for Splits Fitness App
 
 ## Project Overview
 
