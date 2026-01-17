@@ -6,7 +6,6 @@ import React, { useEffect } from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 import { WorkoutProvider } from '@/contexts/WorkoutContext';
-import { trpc, trpcClient } from '@/lib/trpc';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -20,10 +19,7 @@ function RootLayoutNav() {
       <Stack.Screen name="workout" options={{ animation: 'slide_from_right' }} />
       <Stack.Screen name="history" options={{ animation: 'slide_from_right' }} />
       <Stack.Screen name="progress" options={{ animation: 'slide_from_right' }} />
-      <Stack.Screen name="pricing" options={{ animation: 'slide_from_bottom', presentation: 'modal' }} />
       <Stack.Screen name="exercises" options={{ animation: 'slide_from_bottom', presentation: 'modal' }} />
-      <Stack.Screen name="exercise-detail" options={{ animation: 'slide_from_right' }} />
-      <Stack.Screen name="privacy-policy" options={{ animation: 'slide_from_right' }} />
     </Stack>
   );
 }
@@ -34,14 +30,12 @@ export default function RootLayout() {
   }, []);
 
   return (
-    <trpc.Provider client={trpcClient} queryClient={queryClient}>
-      <QueryClientProvider client={queryClient}>
-        <WorkoutProvider>
-          <GestureHandlerRootView>
-            <RootLayoutNav />
-          </GestureHandlerRootView>
-        </WorkoutProvider>
-      </QueryClientProvider>
-    </trpc.Provider>
+    <QueryClientProvider client={queryClient}>
+      <WorkoutProvider>
+        <GestureHandlerRootView>
+          <RootLayoutNav />
+        </GestureHandlerRootView>
+      </WorkoutProvider>
+    </QueryClientProvider>
   );
 }
